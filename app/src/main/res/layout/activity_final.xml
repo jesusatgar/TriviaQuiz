@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_final"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chus.aplicaciontrivial.interfaz.ActivityFinal">
+
+    <TextView
+        android:text="Tu puntuación es:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTituloFinal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:id="@+id/textViewTuPuntuacionEs"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="¡Partida finalizada!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTituloFinal"
+        android:fontFamily="sans-serif"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="0 puntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPuntosFinal"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textViewTuPuntuacionEs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:text="Salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSalir"
+        android:onClick="Reiniciar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonNuevaPartida"
+        android:layout_alignEnd="@+id/buttonNuevaPartida" />
+
+    <Button
+        android:text="Nueva partida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonNuevaPartida"
+        android:onClick="NuevaPartida"
+        android:layout_above="@+id/buttonSalir"
+        android:layout_alignStart="@+id/buttonCompartir"
+        android:layout_alignEnd="@+id/buttonCompartir" />
+
+    <Button
+        android:text="Compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCompartir"
+        android:onClick="Compartir"
+        android:layout_above="@+id/buttonNuevaPartida"
+        android:layout_alignStart="@+id/textViewTuPuntuacionEs"
+        android:layout_alignEnd="@+id/textViewTuPuntuacionEs" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextUser"
+        android:textAlignment="center"
+        android:hint="Introduce usuario..."
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:autoText="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:cursorVisible="true"
+        android:maxLength="12" />
+
+    <Button
+        android:text="Subir al ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonCompartir"
+        android:layout_alignStart="@+id/buttonCompartir"
+        android:id="@+id/buttonRanking"
+        android:layout_alignEnd="@+id/buttonCompartir"
+        android:textAlignment="center"
+        android:onClick="subirPuntuacion"/>
+
+</RelativeLayout>
